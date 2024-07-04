@@ -15,7 +15,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, exact = false, children }) => {
 
 	return (
 		<Link href={href} passHref>
-			<p className={isActive ? 'text-blue-400' : 'text-black'}>{children}</p>
+			<p className={isActive ? 'text-blue-400' : 'text-white'}>{children}</p>
 		</Link>
 	);
 };

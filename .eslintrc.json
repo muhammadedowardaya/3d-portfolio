@@ -1,4 +1,34 @@
 {
-	"extends": "next/core-web-vitals",
-	"ignorePatterns": ["src/models/Island.tsx"]
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			// "jsx": true,
+			"tsx": true
+		}
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript"
+	],
+	"ignorePatterns": ["src/models/"],
+	"plugins": ["@typescript-eslint", "react", "react-hooks", "import"],
+	"rules": {
+		"eslint-plugin-import/no-unresolved": "off",
+		"eslint-plugin-import/no-import-module-exports": "off",
+		"react/react-in-jsx-scope": "off",
+		"react/display-name": "off"
+		// "react/no-unknow"
+	}
 }
